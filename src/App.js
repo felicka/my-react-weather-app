@@ -1,5 +1,5 @@
 import React from "react";
-
+import Weather from "./Weather";
 import "./App.css";
 
 export default function App() {
@@ -7,7 +7,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <h1>React Weather App</h1>
-        <Weather />
+        <Weather/>
         <footer>
           Weather App Coded by Felicia{" "}
           <a
@@ -17,7 +17,7 @@ export default function App() {
           >
             on GitHub
           </a>
-          <button>Press</button>
+          
         </footer>
       </div>
     </div>
