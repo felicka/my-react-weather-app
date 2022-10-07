@@ -35,9 +35,10 @@ body {
   list-style: none;
 }
 
-.Weather img {
-  height: 64px;
+.Weather canvas {
+  height: 60px;
   margin-right: 10px;
+  margin-top: 2px;
 }
 
 .Weather .temperature {
