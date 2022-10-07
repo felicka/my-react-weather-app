@@ -67,7 +67,7 @@ export default function Weather(props) {
   } else {
     search();
 
-    return <div className="Weather">Loading..."</div>;
+    return <div className="Weather">Loading...</div>;
     //add loading spinner
   }
 }
