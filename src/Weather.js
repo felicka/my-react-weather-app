@@ -4,7 +4,6 @@ import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 
-
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
@@ -13,6 +12,7 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
@@ -22,6 +22,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
       //add min and max temperature
+      //add country
     });
   }
 
@@ -64,7 +65,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast/>
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
@@ -74,5 +75,3 @@ export default function Weather(props) {
     //add loading spinner
   }
 }
-
-//https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png
