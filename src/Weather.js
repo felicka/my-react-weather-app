@@ -3,6 +3,7 @@ import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
+import { InfinitySpin } from "react-loader-spinner";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -14,6 +15,7 @@ export default function Weather(props) {
       ready: true,
       coordinates: response.data.coord,
       city: response.data.name,
+      country: response.data.sys.country,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       description: response.data.weather[0].main,
@@ -21,13 +23,8 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
-      //add min and max temperature
-
       max: response.data.main.temp_max,
       min: response.data.main.temp_min,
-
-      country: response.data.sys.country,
-      //add country
     });
   }
 
@@ -76,7 +73,10 @@ export default function Weather(props) {
   } else {
     search();
 
-    return <div className="Weather">Loading...</div>;
-    //add loading spinner
+    return (
+      <div className="Weather">
+        <InfinitySpin width={200} color="pink" />
+      </div>
+    );
   }
 }
