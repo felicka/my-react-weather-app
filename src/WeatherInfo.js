@@ -7,7 +7,11 @@ export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <div className="weather-wrapper">
-        <h1>{props.data.city}</h1>
+        <div className="d-flex justify-content-center">
+          <h1>{props.data.city}</h1>{" "}
+          <span className="country">{props.data.country}</span>
+        </div>
+
         <ul>
           <li>
             <FormattedDate date={props.data.date} />
@@ -36,6 +40,9 @@ export default function WeatherInfo(props) {
           <li>Feels like: {Math.round(props.data.feels)}℃</li>
           <li>Humidity: {props.data.humidity}% </li>
           <li>Wind: {Math.round(props.data.wind)} km/h</li>
+          <li>
+            {Math.round(props.data.max)}° | {Math.round(props.data.min)}°
+          </li>
         </ul>
       </div>
     </div>

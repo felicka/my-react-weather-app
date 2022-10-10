@@ -22,6 +22,11 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
       //add min and max temperature
+
+      max: response.data.main.temp_max,
+      min: response.data.main.temp_min,
+
+      country: response.data.sys.country,
       //add country
     });
   }
