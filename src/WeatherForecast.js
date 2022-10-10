@@ -28,6 +28,7 @@ export default function WeatherForecast(props) {
   if (loaded) {
     return (
       <div className="WeatherForecast">
+        <div className="weather-wrapper">
         <div className="row">
           {forecast.map(function (dailyForecast, index) {
             if (index < 5) {
@@ -40,6 +41,7 @@ export default function WeatherForecast(props) {
               return null;
             }
           })}
+        </div>
         </div>
       </div>
     );
