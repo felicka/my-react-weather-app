@@ -5,15 +5,16 @@ body {
 
 .weather-wrapper {
   background: papayawhip;
-  opacity: 0.7;
   padding: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   width: 275px;
 }
-
+.weather-wrapper .background {
+  opacity: 0.1;
+}
 .Weather {
   border: 5px solid pink;
-  background-image: url("../public/background-leaves.png");
+  background-image: url("../public/images/background-pastel.png");
   font-family: arial, sans-serif;
   padding: 16px;
   border-radius: 7px;
@@ -26,6 +27,7 @@ body {
 
 .Weather h1 {
   color: black;
+  font-weight: bold;
   font-size: 40px;
   font-weight: 100;
   margin: 20px 0 10px 0;
