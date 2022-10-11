@@ -8,7 +8,7 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="Tokyo" />
         <footer>
-          Weather App Coded by Felicia on{" "}
+          Pastel Weather App Coded by Felicia on{" "}
           <a
             href="https://github.com/felicka/my-react-weather-app"
             target="_blank"

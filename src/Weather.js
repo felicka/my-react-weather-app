@@ -68,14 +68,18 @@ export default function Weather(props) {
         </form>
         <WeatherInfo data={weatherData} />
         <WeatherForecast coordinates={weatherData.coordinates} />
+        <div className="weather-wrapper">
+          <p>"Climate is what we expect, weather is what we get."  Mark Twain</p>
+          
+        </div>
       </div>
     );
   } else {
     search();
 
     return (
-      <div className="Weather">
-        <InfinitySpin width={200} color="pink"  />
+      <div className="weather">
+        <InfinitySpin width={200} color="pink" />
       </div>
     );
   }

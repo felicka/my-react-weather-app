@@ -6,7 +6,7 @@ body {
 .weather-wrapper {
   background: papayawhip;
   padding: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 20px auto;
   width: 275px;
 }
 .weather-wrapper .background {
@@ -77,4 +77,9 @@ body {
 }
 .Weather .active:hover {
   text-decoration: none;
+}
+
+.Weather p {
+  font-size: 11px;
+  margin-bottom: 0;
 }
