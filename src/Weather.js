@@ -75,7 +75,7 @@ export default function Weather(props) {
 
     return (
       <div className="Weather">
-        <InfinitySpin width={200} color="pink" />
+        <InfinitySpin width={200} color="pink"  />
       </div>
     );
   }

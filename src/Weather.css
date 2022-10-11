@@ -70,3 +70,11 @@ body {
 .Weather .country {
   top: -34px;
 }
+
+.Weather .active {
+  color: palevioletred;
+  text-decoration: none;
+}
+.Weather .active:hover {
+  text-decoration: none;
+}
