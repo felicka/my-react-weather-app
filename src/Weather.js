@@ -69,8 +69,7 @@ export default function Weather(props) {
         <WeatherInfo data={weatherData} />
         <WeatherForecast coordinates={weatherData.coordinates} />
         <div className="weather-wrapper">
-          <p>"Climate is what we expect, weather is what we get."  Mark Twain</p>
-          
+          <p>"Climate is what we expect, weather is what we get." Mark Twain</p>
         </div>
       </div>
     );
